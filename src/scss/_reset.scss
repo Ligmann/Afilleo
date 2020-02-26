@@ -1,0 +1,38 @@
+//calligraphy
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+p{
+	margin: 0;
+}
+a,a:hover{
+	color:inherit;
+	text-decoration: none;
+}
+ul{
+	margin:0;
+	padding: 0;
+	text-indent: none;
+	list-style-type: none;
+}
+br{
+	@media (max-width:950px) {
+		display: none;
+	}
+}
+//elemnts
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+	@include bodyStyles;
+}
+button{
+	background-color: inherit;
+	border: 0;
+}
+// img{
+// 	width: 100%;
+// }

@@ -1,0 +1,42 @@
+footer
+	section.infoWrap
+		div.wrapContent-wrap
+			h2 Chciałbyś zarezerwować stolik lub cały klub?
+				br
+				| Zadzwoń 
+				a(href="tel=+48535293293") +48 535 293 293
+			h3 piątek - sobota
+				br
+				| od 20:00 do 5:00
+			if(Contact == 'form')
+				form.wrapForm(method="post" action="")
+					input(type="text" value="" placeholder="Imię i Nazwisko")
+					input(type="text" value="" placeholder="Adres e-mail")
+					input(type="text" value="" placeholder="Telefon")
+					textarea(placeholder="Wiadomość")
+					input(type="submit" value="WYŚLIJ")
+			else
+				a(href="contact.html").contact-button NAPISZ DO NAS
+	section.mapsInfo
+		div.wrapFlex-footer
+			div.maps.boxItem-wf
+				iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2394.365031476982!2d17.997956716093526!3d53.12159257993256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470313bb8200a9d1%3A0xc42b668d82f24f88!2sSeta%20Disco%20Bydgoszcz!5e0!3m2!1spl!2spl!4v1580395309512!5m2!1spl!2spl" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="")
+			div.content-Maps.boxItem-wf
+				h3 Gdzie nas znajdziesz?
+				b Seta Disco
+				b ul. Stary Rynek 18
+				br
+				b 85-034, Bydgoszcz
+				p 
+					a(href="tel:+48690606960") +48 690 60 69 60
+					br
+					a(href="mailto:biuro@setadisco.pl") biuro@setadisco.pl
+				br
+				| piątek - sobota
+				br
+				| od 20:00 do 5:00
+				br
+				i(class="fab fa-facebook-f")
+	section.bootomFooter
+		a(href="https://setadisco.pl") setadisco.pl © 2020 
+		a(a class="footerClass" href="https://ligmann.eu/" rel="dofollow" target="_blank" style="float:right") Created by | Damian Ligmann

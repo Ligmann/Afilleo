@@ -1,0 +1,37 @@
+-
+	var Title = 'Influencer';
+doctype html
+html
+	head
+		include template_parts/head.pug
+	body
+		include template_parts/nav.pug
+		main.fromPages
+			div.GlobalContainer
+				section.GlobalFlexWrap
+					div.leftColumn
+						div.imagefroms
+					div.rightColumn
+						h2 ARE YOU AN INFLUENCER?
+						form(action="").wrapForm
+							h3 Fill out the form and we will get back to you!
+							input(type="text" placeholder="Your country").TwoStylesInputs
+							span.wrapTwoInput
+								input(type="text" placeholder="Your Name")
+								input(type="text" placeholder="Phone number")
+							input(type="text" placeholder="e-mail address")
+							span.spaceLinear
+							span.wrapTwoInput
+								input(type="text" placeholder="#1 adress to your profile")
+								input(type="text" placeholder="#2 adress to your profile")
+							textarea(type="text" placeholder="massage")
+							span.wrapTwoInput.wrapchecbox
+								input(type="checkbox")
+								div.checkbox
+								p.regulamnins  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+							input(type="submit" value="Send").buttonFrom
+
+
+							
+			footer
+				a(href="https://ligmann.eu/", target="_blank") Created by | Damian Ligmann

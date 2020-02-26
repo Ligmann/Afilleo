@@ -1,0 +1,33 @@
+-
+	var Title = 'TryDemo.pug';
+doctype html
+html
+	head
+		include template_parts/head.pug
+	body
+		include template_parts/nav.pug
+		main.fromPages.TryDemo
+			div.GlobalContainer
+				section.GlobalFlexWrap
+					div.rightColumn
+						h2 TRY DEMO ON YOUR BROSWER
+						form(action="").wrapForm
+							h3 Test it now, it's absolutly non-binding
+							input(type="text" placeholder="Your country").TwoStylesInputs
+							span.wrapTwoInput
+								input(type="text" placeholder="Your Name")
+								input(type="text" placeholder="Phone number")
+							input(type="text" placeholder="e-mail address")
+							span.spaceLinear
+							span.wrapTwoInput.wrapchecbox
+								input(type="checkbox")
+								div.checkbox
+								p.regulamnins  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+							input(type="submit" value="Try Demo Now").buttonFrom
+					div.leftColumn
+						div.imagefroms
+
+
+							
+			footer
+				a(href="https://ligmann.eu/", target="_blank") Created by | Damian Ligmann
