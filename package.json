@@ -19,5 +19,8 @@
     "gulp-webp": "^4.0.1",
     "gm": "^1.23.1",
     "gulp-gm": "0.0.9"
+  },
+  "dependencies": {
+    "gulp-autoprefixer": "^7.0.1"
   }
 }

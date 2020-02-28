@@ -1,0 +1,40 @@
+-
+	var Title = 'Education';
+doctype html
+html
+	head
+		include template_parts/head.pug
+	body
+		main(type="main")#homePage.GlobalContainer
+			header#masterHeader
+				div.WrapLeftElements-H
+					a(href="main.html")#logoMaster
+						img(src="images/one-F.png" alt="masterLogo")
+					nav.bottomnav#MasterNav
+						div.WrapburgerRwd
+							span.burgerItemRwd
+						div.burgermenu()
+							include template_parts/mixin.pug
+				form(action="").WrapRightElements-H
+					span.wrapLogoStyles
+						input(type="text" placeholder="Login").loginStyles
+						a(href="https://ligmann.eu/").resetStats Become a Lead
+					span.wrapLogoStyles
+						input(type="password" placeholder="Password").loginStyles
+						a(href="https://ligmann.eu/").resetStats Forget password
+					input(type="submit" value="GO").loginButton
+			section.GlobalFlexWrap
+				div.leftElements
+					img(src="images/logoBaner.png", alt="")
+					h2 WORLD'S LEADING
+					img(src="images/three-J.png", alt="")
+					img(src="images/eight-B.png", alt="")
+				div.centerElements
+					div.imageCenter
+					a(href="#").readMoreButton Read More
+				div.rightElements
+					div.wrapTable
+						h2.hedaderTable Top Afifliate
+			section#bottomMain
+
+

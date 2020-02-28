@@ -1,8 +1,8 @@
 //variables
-$violet:#6131f8d6;
+$violet:rgba(97, 49, 248, 0.83921568627);
 $violetTwo:#6131f7;
 $backgroundViolet:#1e0d4d;
-$white:#ffff;
+$white:#fff;
 $orange:#f2b36f;
 $blue:#0396f9;
 $trans: .2s linear;
@@ -87,10 +87,14 @@ $trans: .2s linear;
 footer{
 	padding: 3rem 27px 1rem;
 	display: flex;
-	justify-content: end;
+	justify-content: flex-end;
+
+	@media (max-width:435px) {
+		padding: 0rem 27px 1rem;
+	}
 
 	a{
-		color: #ffffff87;
+		color: rgba(255, 255, 255, 0.529411765);
 		font-size: 15px;
 		font-weight: 100;
 		transition: color $trans;

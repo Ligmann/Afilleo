@@ -1,25 +1,13 @@
-mixin navigationsItems(id, arr)
-	ul(class=id)
-		each a in arr
-			a(href=a[0])
-				li= a[1]
 nav#masterNav
 	div.topNav
 		div.leftContent
-			a(href="index.html").wrapLogoTop
-				img(src="images/logoLeft.webp" alt="logo affileo")
+			a(href="main.html").wrapLogoTop
+				img(src="images/logoLeft.png" alt="logo affileo")
 				span.logoLinear
-				img(src="images/logoRight.webp" alt="logo affileo")
+				img(src="images/logoRight.png" alt="logo affileo")
 			input(type="text" placeholder="Search").search
 		div.bottomnav
 			div.WrapburgerRwd
 				span.burgerItemRwd
 			div.burgermenu()
-				+navigationsItems('wrapMasterLI', [
-					['https://ligmann.eu/','About'],
-					['education.html', 'Education'],
-					['TryDemo.html', 'Try Demo'],
-					['https://ligmann.eu/', 'Company'],
-					['influencer.html', 'Are you an influencer'],
-					['https://ligmann.eu/', 'Contact'],
-				])
+				include mixin.pug

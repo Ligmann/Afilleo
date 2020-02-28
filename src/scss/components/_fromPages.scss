@@ -20,10 +20,10 @@
 			width: 100%;
 		}
 		.imagefroms{
-			background: url(../images/banerLeft-Q.webp) center center no-repeat;
+			background: url(../images/banerLeft-Q.png) center center no-repeat;
 			background-size: contain;
 			background-position: 50% 50%;
-			height: 41rem;
+			height: 39rem;
 
 			@media (max-width: 1160px){
 				height: 26rem;
@@ -109,9 +109,17 @@
 			.wrapTwoInput{
 				display: flex;
 
+				@media (max-width:435px) {
+					display: block;
+				}
+
 				input{
 					&:last-child{
 						margin-left: 1rem;	
+						
+				@media (max-width:435px) {
+					margin: 0;
+				}
 					}
 				}
 			}
@@ -147,6 +155,10 @@
 		align-items: center;
 		margin: 2px 0 3px 0;
 		height: 40px;
+
+		@media (max-width:435px) {
+			margin: 2px 0 19px 0;
+		}
 
 		input[type="checkbox"] {
 			width: 40px !important; 
@@ -192,7 +204,7 @@
 			padding: 0;
 		}
 		.imagefroms{
-			background: url(../images/baner-A.webp) center center no-repeat;
+			background: url(../images/baner-A.png) center center no-repeat;
 			background-size: contain;
 			background-position: 50% 50%;
 		}

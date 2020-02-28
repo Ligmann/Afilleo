@@ -3,6 +3,7 @@ const gulp_pug = require('gulp-pug');
 const gulp_sass = require('gulp-sass');
 const gulp_gm = require('gulp-gm');
 const gulp_babel = require('gulp-babel');
+const autoprefixer = require('gulp-autoprefixer');
 
 const browserSync = require('browser-sync');
 
@@ -42,6 +43,7 @@ function process_babel(arg1, arg2) {
 
 function process_pug(cb) {
 	gulp.src([
+		'src/main.pug',
 		'src/education.pug',
 		'src/influencer.pug',
 		'src/TryDemo.pug'
@@ -58,6 +60,9 @@ function process_sass(cb) {
 	])
 		.pipe(gulp_sass())
 		.on('error', swallowError)
+		.pipe(autoprefixer({
+            cascade: true
+        }))
 		.pipe(gulp.dest('build/css'));
 	cb();
 }
@@ -91,7 +96,7 @@ function serve(cb) {
 		port: 8080,
 		server: {
 			baseDir: "./build",
-			index: "TryDemo.html",
+			index: "main.html",
 			port: 8080
 		},
 		ui: {
