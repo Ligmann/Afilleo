@@ -1,13 +1,20 @@
 #homePage{
 	background: url(../images/bacground.png) center center no-repeat;
 	background-size: 100% 100%;
-	height: 100vh;
 
 	&.GlobalContainer{
 		padding: 1.7em 6vw;
 	}
 	.GlobalFlexWrap {
 		padding-top: 1.5rem;
+		height: 540px;
+
+		@media (max-width: 1068px){
+			height: auto;
+		}
+		@media (max-width: 852px){
+			flex-flow: wrap;
+		}
 	}
 	#masterHeader {
 		display: flex;
@@ -36,9 +43,22 @@
 					width: auto;
 					height: 4rem;
 					padding-right: 1.8rem;
+
+					@media (max-width:1087px) {
+						height: 3.4rem;
+						padding-right: 7px;
+					}
 				}
 			}
 			#MasterNav{
+				.WrapburgerRwd {
+					margin-left: 2rem;
+					position: relative;
+					bottom: 4px;
+				}
+				.burgermenu {
+					top: 133px;
+				}
 				.wrapMasterLI {
 					padding-bottom: 4px;
 
@@ -46,6 +66,11 @@
 						display: inline-block;
 						padding: 0 4px;
 						font-size: 15px;
+
+						@media (max-width:1087px) {
+							font-size: 14px;
+							padding: 0 2px;
+						}
 					}
 				}
 			}
@@ -54,8 +79,9 @@
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
-			@media (max-width:600px) {
-					width: 100%;
+
+			@media (max-width:500px) {
+				
 			}
 			.wrapLogoStyles {
 				display: flex;
@@ -72,16 +98,20 @@
 					margin: 0 5px;
 					color: $white;
 					transition: background-color $trans;
-					
+
+					@media (max-width:1090px) {
+						width: 7.5rem;
+					}
 					@media (max-width:600px) {
 						padding: 6px 10px;
+						width: 29vw;
 					}
 					&::placeholder{
 						text-align: right;
 						color: $violetTwo;
 						transition: opacity $trans;
 					}
-					&:hover{
+					&:hover, &:focus{
 						transition: background-color $trans;
 						background-color: transparent;
 	
@@ -99,7 +129,7 @@
 					font-size: 12px;
 					transition: color $trans;
 
-					&:hover{
+					&:hover, &:focus{
 						transition: color $trans;
 						color: $violetTwo;
 					}
@@ -118,10 +148,10 @@
 				margin-left: 6px;
 				transition:background-color  $trans;
 
-				@media (max-width:800px) {
-					
+				@media (max-width:1087px) {
+					padding: 7px;
 				}
-				&:hover{
+				&:hover, &:focus{
 					background-color: $violet;
 					transition:background-color  $trans;
 				}
@@ -132,12 +162,28 @@
 		width: 30%;
 		padding-right: 34px;
 
+		@media (max-width: 1068px){
+			padding-top: 3rem;
+		}
+		@media (max-width: 852px){
+			width: 100%;
+		}
+		@media (max-width: 852px){
+			padding: 3rem 10vw 0;
+		}
 		img{
 			width: 100%;
 		}
 		h2{
 			font-size: 35px;
 			font-weight: 500;
+
+			@media (max-width: 1068px){
+				font-size: 26px;
+			}
+			@media (max-width: 852px){
+				font-size: 35px;
+			}
 
 			&::after{
 				content: "Social gambling tool";
@@ -149,29 +195,435 @@
 			height: 5rem;
 			width: 40%;
 			margin-bottom: 1.5rem;
+
+			@media (max-width: 1068px){
+				width: 55%;
+			}
+			@media (max-width: 852px){
+				width: 33%;
+			}
 		}
 	}
 	.centerElements{
-		width: 45%;
+		width: 47%;
 		position: relative;
 
+		@media (max-width: 1068px){
+			width: 50%;
+		}
+		@media (max-width: 852px){
+			width: 100%;
+			margin: 46px 0;
+		}
 		.imageCenter{
 			background: url(../images/baner.png) center center no-repeat;
 			background-size: contain;
-			height: 37vw;
+			height: 100%;
+
+			@media (max-width: 852px){
+				height: 64vw;
+			}
 		}
 		.readMoreButton {
 			background-color: $backgroundViolet;
 			border: 2px solid $violetTwo;
 			border-radius: 12px;
-			padding: 7px 28px;
+			padding: 7px 0;
 			position: absolute;
 			right: 0;
 			bottom: 0;
+			text-align: center;
+			transition: background-color $trans;
+			@include widthMasterScall;
+
+			&:hover, &:focus{
+				background-color: $violet;
+				transition: background-color $trans;
+			}
+
+			@media (max-width: 852px){
+				width: 68vw;
+				position: relative;
+				display: block;
+				margin: 0 auto;
+			}
 		}
 	}
-	.rightElements{
-		width: 25%;
-		padding-left: 20px;
+	.rightElements{ 
+		width: 23%;
+
+		@media (max-width: 1068px){
+			width: 20%;
+		}
+		@media (max-width: 852px){
+			width: 100%;
+		}
+		.wrapTable{
+			display: flex;
+			flex-flow: column;
+			align-items: self-end;
+			font-size: 15px;
+
+			.childWrap{
+				@include widthMasterScall;
+
+				@media (max-width: 852px){
+					width: 100%;
+					padding: 0 9vw;
+				}
+
+				.hedaderTable{
+					text-align: center;
+					background-color: $violet;
+					border-top-right-radius: 10px;
+					border-top-left-radius: 10px;
+					padding: 9px 0;
+					width: 100%;
+					margin: 0;
+					font-weight: 400;
+					font-size: 23px;
+
+				}
+				.columnsTable{
+					width: 100%;
+					color: $violet;
+	
+					.allStylesTable{
+						padding: 3px 1rem;
+					}
+					.firstTable{
+						background-color: #281167;
+					}
+					.lastTable{
+						background-color: #321680;
+					}
+				}
+				.buttonTable{
+					background-color: $orange;
+					color: $white;
+					display: block;
+					width: 100%;
+					text-align: center;
+					border-radius: 10px;
+					padding:9px 0;
+					font-weight: 500;
+					font-size: 17px;
+					transition: background-color $trans, border-radius $trans;
+
+					&:hover, &:focus{
+						background-color: $violetTwo;
+						border-radius: 5px;
+						transition: background-color $trans, border-radius $trans;
+					}
+
+					&:nth-of-type(2){
+						background-color: $blue;
+						margin-top: 13px;
+
+						&:hover, &:focus{
+							background-color: $violetTwo;
+							border-radius: 5px;
+							transition: background-color $trans, border-radius $trans;
+						}
+					}
+				}
+			}
+		}
+	}
+	#bottomMain{
+		display: flex;
+		background-color: $violet;
+		border-radius: 13px;
+		padding: 1rem;
+		margin-top: 2rem;
+			
+		br{
+			display: block !important;
+		}
+		@media (max-width:875px) {
+			flex-flow: wrap;
+		}
+
+		.leftColumn{
+			display: flex;
+			background-color: #281167;
+			padding: 1rem;
+			border-radius: 13px;
+			width: 42%;
+			
+			@media (max-width:875px) {
+				width: 100%;
+			}
+
+			.allStyles-LeftColumn{
+				width: 33.333%;
+
+				&:nth-child(1), &:nth-child(2){
+					border-right: 1px solid $backgroundViolet;
+				}
+				&:nth-child(2){
+					.img-leftColumn{
+						background: url(../images/four-D.png) center center no-repeat;
+						background-size: contain;
+						border-left: none;
+						border-right: none;
+					}
+				}
+				&:nth-child(3){
+					.img-leftColumn{
+						background: url(../images/seven-G.png) center center no-repeat;
+						background-size: contain;
+						border-left: none;
+					}
+				}
+				.img-leftColumn{
+					background: url(../images/six-H.png) center center no-repeat;
+					background-size: contain;
+					height: 2.4rem;
+					border: 1px solid $backgroundViolet;
+				}
+				h6{
+					color: $violet;
+					padding-top: 5px;
+					padding-left: 1rem;
+
+					@media (max-width:875px) {
+						text-align: center;
+					}
+				}
+				p{
+					font-weight: bold;
+					font-size: 12px;
+					padding-left: 1rem;
+
+					@media (max-width:875px) {
+						text-align: center;
+					}
+				}
+				a{
+					font-size: 10px;
+					float: right;
+					color: $blue;
+					transition: color $trans;
+					
+					&:hover, &:focus{
+						transition: color $trans;
+						color: $violetTwo;
+					}
+				}
+			}
+		}
+		.rightColumn{
+			display: flex;
+			background-color: #281167;
+			border-radius: 13px;
+			padding: 1rem;
+			margin-left: 1rem;
+			width: 56%;
+
+			@media (max-width:875px) {
+				width: 100%;
+				margin: 2rem 0 0;
+			}
+			.leftItems-bm, .rightItems-bm{
+				width: 50%;
+
+				.headerItems-bm{
+					background-color: $violet;
+					padding: 6px 16px;
+					border-top-left-radius: 13px;
+
+					@media (max-width: 545px){
+						text-align: center;
+					}
+					p:nth-child(2){
+						position: relative;
+
+						&::before{
+							content: "";
+							position: absolute;
+							right: 60px;
+							top: -2px;
+							background:url(../images/logoLeft.png) center center no-repeat;
+							background-size: contain;
+							width: 1.3rem;
+							height: 1.3rem;
+
+							@media (max-width: 545px){
+								display: none;
+							}
+						}
+						
+						&::after{
+							content: "Basic Affiliate";
+							position: absolute;
+							right: 0;
+							top:0;
+							font-size: 12px;
+							text-align: center;
+							font-weight: 400;
+
+							@media (max-width: 545px){
+								position: static;
+								display: block
+							}
+						}
+					}
+				}
+				&:nth-child(2){
+					.headerItems-bm{
+						border-top-left-radius: 0;
+						border-top-right-radius: 13px;
+						background-color: $orange;
+					}
+				}
+				.bottom-bm{
+					display: flex;
+
+					.itemsOne-bm{
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 15%;
+
+						h5{
+							transform: rotateZ(270deg);
+							color: $violet;
+						}
+					}
+					.itemsTwo-bm{
+						width: 85%;
+			
+						.ElementsItemsThere-bm{
+							display: flex;
+
+							.PositionsNumber{
+								border: 2px solid $violet;
+								text-align: center;
+								font-size: 22px;
+								font-weight: bold;
+								color: $violet;
+								width: 22%;
+								padding: 1px 0;
+
+								@media (max-width: 545px){
+									width: 40%;
+
+								}
+							}
+							.namberElement{
+								width: 78%;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								
+								@media (max-width: 545px){
+									width: 60%;
+								}
+							}
+						}
+					}
+				}
+			}
+			.rightItems-bm{
+				.headerItems-bm{
+					p:nth-child(2){
+						&::before{
+							content: "";
+							position: absolute;
+							right: 75px;
+						}
+						&::after{
+							content: "Premium Affiliate";
+							color: #a56e3c;
+						}
+					}
+				}
+				.bottom-bm{
+					color: $orange;
+				}
+			}
+		}
+	}
+	#footerPage{
+		display: flex;
+		margin-top: 1rem;
+
+		@media (max-width: 545px){
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.logo{
+			width: 6%;
+
+			@media (max-width: 545px){
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+			img{
+				width: 100%;
+				transform: scale(.8);
+
+				@media (max-width: 545px){
+					width: auto;
+				}
+			}
+		}
+		.contentfooter{
+			width: 88%;
+			padding-left: 1rem;
+
+			@media (max-width: 545px){
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+
+			img{
+				height: 12px;
+
+				@media (max-width: 545px){
+					height: auto;
+					margin: 1rem 0;
+				}
+			}
+			p{
+				font-size: 11px;
+			}
+		}
+		.rgightfooterIcons{
+			display: flex;
+			width: 6%;
+
+			@media (max-width: 545px){
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+			a{
+				display: block;
+				width: 28px;
+				margin: 0 3px;
+
+				@media (max-width: 545px){
+					width: 3rem;
+					margin: 0;
+					height: 2rem;
+				}
+			}
+			.facebook{
+				background: url(../images/nine-E.png)center center no-repeat;
+				background-size: contain;
+			}
+			.instagram{
+				background: url(../images/nine-E.png)center center no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+	footer{
+		padding: 12px 0 0 0;
 	}
 }

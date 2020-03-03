@@ -1,12 +1,11 @@
 //variables
 $violet:rgba(97, 49, 248, 0.83921568627);
 $violetTwo:#6131f7;
-$backgroundViolet:#1e0d4d;
+$backgroundViolet:#1e0d4d;  
 $white:#fff;
 $orange:#f2b36f;
 $blue:#0396f9;
 $trans: .2s linear;
-
 //mixin import all styles to body/_reset
 @mixin bodyStyles {
 	background-color: $backgroundViolet;
@@ -36,6 +35,13 @@ $trans: .2s linear;
 	transition: background-color linear .4s, transform linear .4s;
 	background-color: $white;
 	transform:rotate($rotateLinear);
+}
+@mixin widthMasterScall {
+	width: 13vw;
+
+	@media (max-width: 1068px){
+		width: 15vw;
+	}
 }
 //fonts
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700&display=swap');

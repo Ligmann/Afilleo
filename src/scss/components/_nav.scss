@@ -8,6 +8,7 @@
 	}
 	.topNav{
 		display: flex;
+		justify-content: space-between;
 
 		@media (max-width:945px) {
 			justify-content: space-around;

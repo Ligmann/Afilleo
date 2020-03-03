@@ -89,6 +89,11 @@
 				height: 2.5rem;
 				border-radius: 7px;
 				padding: 7px 19px;
+
+				@media (max-width: 545px) {
+					height: auto;
+					padding: 10px 19px;
+				}
 			}
 			::placeholder{
 				text-align: center;
